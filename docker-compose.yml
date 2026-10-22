@@ -1,0 +1,14 @@
+services:
+  dnd-discord-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dnd-discord-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Persist SQLite D&D database across container rebuilds/restarts.
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production

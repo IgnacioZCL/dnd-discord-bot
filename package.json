@@ -1,0 +1,15 @@
+{
+  "name": "dnd-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord D&D helper bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "discord.js": "^14.18.1",
+    "dotenv": "^16.4.7"
+  }
+}
